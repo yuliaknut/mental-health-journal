@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+  body {
+    background-image: url("images/background4.jpg");
+    background-size: cover;
+    background-position: 10%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    
+  }
+  
+  header {
+    background-color: #85ad9c5f;
+    margin: auto -16px;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    color: #fff;
+    font-weight: 200;
+  }
+  
+  footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+  
+  footer p {
+    color: #ccc;
+  }
+
+  form {
+    padding: 20px 0;
+    position: relative;
+  }
+  form input {
+    border: 1px solid rgba(195, 191, 191, 0.4);
+    background-color: rgba(242, 238, 238, 0.381);
+    width: 250px;
+    border-radius: 3px;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  form button {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    appearance: none;
+    outline: 0;
+    background-color: #5e817290;
+    border: 0;
+    padding: 10px 15px;
+    color: #ccc;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 18px;
+  }
+  
+  div h1.page-title {
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 0.5%;
+    color: #2d2e2ea8;
+    font-family: Comfortaa;
+  }
+
+  div.aref {
+    text-align: center;
+  }
+
+  .ref {
+    color: white;
+    text-decoration: none;
+    font-family: Comfortaa;
+    text-align: center;
+  }
+  
+  input:focus {
+    outline: #ccc
+  }
+
+  form.create-area {
+    position: relative;
+    width: 600px;
+    margin: 30px auto 20px auto;
+    background: #EEEEEE;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+  }
+
+  form.create-area input,
+  form.create-area textarea {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: Comfortaa;
+    resize: none;
+    background-color: #EEEEEE;
+  }
+  
+   .save-button {
+    display: inline-block;
+    bottom: 20%;
+    right: 18px;
+    appearance: none;
+    outline: 0;
+    background-color: #67815e90;
+    border: 0;
+    padding: 10px 15px;
+    color: #ccc;
+    border-radius: 3px;
+    width: 10%;
+    font-size: 18px;
+  }
+  
+  form p {
+    color: #2d2e2e7a;
+    font-family: Comfortaa;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+
+  form hr {
+    border: 0;
+    height: 1px;
+    background: #2d2e2e50;
+  }
+
