@@ -1,5 +1,8 @@
+import { PropaneSharp } from "@mui/icons-material";
 import React, {useState} from "react";
 import RadioGroupRating from "./MoodRating";
+import { useDispatch, useSelector } from "react-redux";
+import { add } from "../redux/entriesSlice"
 
 
 
@@ -7,26 +10,36 @@ function CreateArea() {
 
     const [entry, setEntry] = useState({
         content: '',
-        date: '',
+        date: new Date().toDateString(),
+        lastEdited: new Date().toDateString(),
         emotion: ''
     });
 
+    //const entries = useSelector((state) => state.entriesSlice.entries);
+    const dispatch = useDispatch();
+
     function handleChange(event) {
-        console.log(event);
         const {name, value} = event.target;
         
         setEntry(prevValue => {
             return {
                 ...prevValue, 
-                [name]: value
+                [name]: value,
             };
         });
         
     }
 
     function submitEntry(event) {
-        setEntry()
-        
+        setEntry({
+            content: '',
+            date: new Date().toDateString(),
+            lastEdited: new Date().toDateString(),
+            emotion: ''
+        });
+        event.preventDefault();
+
+        return dispatch(add(entry));
     }
 
     return (<div>
@@ -36,8 +49,9 @@ function CreateArea() {
             <hr/>
             <p>How are you feeling?</p>
             <RadioGroupRating passage={handleChange} name="emotion" value={entry.emotion} />
+        
+        <button className="save-button" onClick={submitEntry}>Save</button>
         </form>
-        <button className="save-button" type="submit" onClick={submitEntry}>Save</button>
     </div>)
 }
 

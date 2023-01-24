@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import LogIn from "./pages/LogIn";
 import CreateEntry from "./pages/CreateEntry";
+import { Entry } from "./components/Entry";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -27,17 +28,17 @@ const router = createBrowserRouter([
         element: <SignUp />
     },
     // {
-    //     path: "/my-account",
+    //     path: "/myaccount",
     //     element: <Settings />
     // },
     {
         path: "/newentry",
         element: <CreateEntry />
-    }//,
-    // {
-    //     path: "view-entry",
-    //     element: <Entry />
-    // }
+    },
+    {
+        path: "/entry",
+        element: <Entry />
+    }
 ]);
 
 function App() {

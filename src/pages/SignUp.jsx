@@ -1,8 +1,9 @@
 import React from "react";
 import Input from "../components/Input";
+import { mouseOver, mouseOut } from "./LogIn";
 
 function SignUp() {
-    return (<div className="aref">
+    return (<div className="alined">
         <h1 className="page-title">Take another step toward self awareness</h1>
         <form className="form">
             <Input 
@@ -17,10 +18,10 @@ function SignUp() {
             type="password"
             placeholder="Confirm Password"
             />
-            <button type="submit">Register</button>
+            <button className="login-button" type="submit">Register</button>
         </form>
 
-        <a className="ref" href="/login">I already have an account</a>
+        <a className="ref" onMouseEnter={mouseOver} onMouseLeave={mouseOut} href="/login">I already have an account</a>
 
     </div>)
 

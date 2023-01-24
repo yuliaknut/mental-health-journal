@@ -7,25 +7,25 @@
     font-family: "Montserrat", sans-serif;
   }
   body {
-    background-image: url("images/background4.jpg");
+    background-image: url("images/background3.jpg");
     background-size: cover;
-    background-position: 10%;
+    background-position: 0% 44.5%;
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
-    
   }
   
   header {
-    background-color: #85ad9c5f;
-    margin: auto -16px;
+    background-color: #8998927a;
     padding: 16px 32px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
   
-  header h1 {
+  .header-title {
     color: #fff;
     font-weight: 200;
+    font-size: xx-large;
+    text-decoration: none;
   }
   
   footer {
@@ -45,8 +45,8 @@
     position: relative;
   }
   form input {
-    border: 1px solid rgba(195, 191, 191, 0.4);
-    background-color: rgba(242, 238, 238, 0.381);
+    border: 1px solid rgba(195, 191, 191, 0.673);
+    background-color: rgba(242, 238, 238, 0.67);
     width: 250px;
     border-radius: 3px;
     font-family: "Source Sans Pro", sans-serif;
@@ -57,45 +57,47 @@
     font-size: 18px;
     font-weight: 300;
   }
+
+  input:focus {
+    outline-color: rgba(195, 191, 191, 0.673)
+  }
+
   
-  form button {
+  .login-button {
     margin: 0 auto;
     display: block;
     text-align: center;
     appearance: none;
     outline: 0;
-    background-color: #5e817290;
+    background-color: #8998928f;
     border: 0;
     padding: 10px 15px;
-    color: #ccc;
+    color: rgba(230, 225, 225, 0.946);
     border-radius: 3px;
     width: 250px;
     font-size: 18px;
+    cursor: pointer;
   }
   
   div h1.page-title {
     text-align: center;
     padding-top: 3%;
     padding-bottom: 0.5%;
-    color: #2d2e2ea8;
+    color: #ffffff;
     font-family: Comfortaa;
+    cursor: default;
   }
 
-  div.aref {
+  div.alined {
     text-align: center;
   }
 
   .ref {
-    color: white;
+    color: rgba(255, 255, 255, 0.789);
     text-decoration: none;
     font-family: Comfortaa;
-    text-align: center;
   }
-  
-  input:focus {
-    outline: #ccc
-  }
-
+ 
   form.create-area {
     position: relative;
     width: 600px;
@@ -119,18 +121,18 @@
   }
   
    .save-button {
-    display: inline-block;
-    bottom: 20%;
-    right: 18px;
-    appearance: none;
-    outline: 0;
-    background-color: #67815e90;
-    border: 0;
-    padding: 10px 15px;
-    color: #ccc;
-    border-radius: 3px;
-    width: 10%;
-    font-size: 18px;
+    position: relative;
+    float: right;
+    float: bottom;
+    font-size: larger;
+    font-family: Comfortaa;
+    margin-right: 22px;
+    color: #2d2e2eac;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border: none;
+    outline: none;
   }
   
   form p {
@@ -138,11 +140,14 @@
     font-family: Comfortaa;
     padding-bottom: 4px;
     padding-top: 4px;
+    margin-bottom: 0.2%;
+    cursor: default;
   }
 
   form hr {
     border: 0;
     height: 1px;
+    margin-bottom: 1%;
     background: #2d2e2e50;
   }
 

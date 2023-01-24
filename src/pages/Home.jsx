@@ -1,9 +1,9 @@
 import React from "react";
 
 const Home = () => (
-    <div>
-        <h1>Home Page</h1>
-        <a href="/sign-up">sign up</a>
+    <div className="alined">
+        <h1 className="page-title">No entries yet...</h1>
+        <a className="ref" href="/newentry">add an entry</a>
     </div>
 )
 
