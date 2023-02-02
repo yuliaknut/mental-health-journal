@@ -1,20 +1,28 @@
 import { PropaneSharp } from "@mui/icons-material";
 import React, {useState} from "react";
+import { Navigate } from "react-router-dom";
 import RadioGroupRating from "./MoodRating";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../redux/entriesSlice"
 
-
-
 function CreateArea() {
 
+    const entries = useSelector((state) => state.entriesSlice.entries);
+
     const [entry, setEntry] = useState({
+        id: entries.length + 1,
         content: '',
-        date: new Date().toDateString(),
-        lastEdited: new Date().toDateString(),
-        emotion: ''
+            date: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`,
+            lastEdited: `${new Date().getMonth() + 1}/${new Date().getDate()}/${new Date().getFullYear()}`,
+            emotion: null
     });
 
+    const [redirect, setRedirect] = useState(false);
+
+    if (redirect) {
+        return <Navigate to='/' />
+                setRedirect(false);
+    }
     //const entries = useSelector((state) => state.entriesSlice.entries);
     const dispatch = useDispatch();
 
@@ -31,15 +39,9 @@ function CreateArea() {
     }
 
     function submitEntry(event) {
-        setEntry({
-            content: '',
-            date: new Date().toDateString(),
-            lastEdited: new Date().toDateString(),
-            emotion: ''
-        });
         event.preventDefault();
-
-        return dispatch(add(entry));
+        dispatch(add(entry));
+        setRedirect(true)
     }
 
     return (<div>

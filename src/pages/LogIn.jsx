@@ -1,6 +1,6 @@
-import { style } from "@mui/system";
 import React, { useState } from "react";
 import Input from "../components/Input";
+import { Link } from "react-router-dom";
 
 function mouseOver(event) {
     event.target.style.color = 'white';
@@ -14,7 +14,7 @@ function LogIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
-    return (<div className="alined">
+    return (<div className="aligned">
         <h1 className="page-title">Take another step toward self awareness</h1>
         <form className="form">
             <Input 
@@ -32,7 +32,7 @@ function LogIn() {
             
         </form>
 
-        <a className="ref" onMouseEnter={mouseOver} onMouseLeave={mouseOut}  href="/register">or create an account</a>
+        <Link className="ref" onMouseEnter={mouseOver} onMouseLeave={mouseOut} to="/register">or create an account</Link>
         
     </div>)
 

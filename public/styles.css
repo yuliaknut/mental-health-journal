@@ -29,9 +29,9 @@
   }
   
   footer {
-    position: absolute;
-    text-align: center;
+    position: absolute; 
     bottom: 0;
+    text-align: center;
     width: 100%;
     height: 2.5rem;
   }
@@ -88,7 +88,7 @@
     cursor: default;
   }
 
-  div.alined {
+  div.aligned {
     text-align: center;
   }
 
@@ -149,5 +149,117 @@
     height: 1px;
     margin-bottom: 1%;
     background: #2d2e2e50;
+  } 
+  
+  .float {
+    cursor: pointer;
+    text-align: right;
   }
+
+  .float button {
+  position: fixed;
+  text-align: center;
+  right: 10%;
+  bottom: 18%;
+  background: #fffefa8a;
+  color: rgb(255, 255, 255);
+  border-radius: 100%;
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  }
+
+  .display-table {
+    border-collapse: collapse;
+    position: relative;
+    background: rgba(255, 255, 255, 0.492);
+    border-radius: 7px;
+    font-family: Comfortaa;
+    padding: 10px;
+    margin: auto;
+    margin-top: 1.3%;
+    width: 600px;
+  }
+
+  table.display-table tr {
+    border-bottom: 1px solid #4b4f4f34;
+  }
+  .display-table tr:hover {
+    background-color:rgba(255, 255, 255, 0.16);
+  }
+  .no-hover {
+    pointer-events: none;
+}
+
+  .display-table th {
+    margin-top: 1.3%;
+    color: rgba(255, 255, 255, 0.94);
+    font-size: large;
+    padding: 15px 19px 15px 19px;
+    background-color: #8c959163;
+  }
+
+  .display-table td {
+    margin: auto;
+    margin-top: 1.3%;
+    padding: 12px 19px 12px 19px;
+    cursor: pointer;
+  }
+
+  .preview-column {
+    text-align: left;
+    border-left: 1px solid #4b4f4f34;
+    width: 540px;
+    color: #484949;
+  }
+
+  .mood-column {
+     text-align: center;
+     border-left: 1px solid #4b4f4f34;
+     width: 60px;
+     color: #FFC93C;
+
+  }
+
+  .date-column {
+    text-align: center;
+    width: 60px;
+    color: #484949;
+  }
+
+  .entry {
+    position: relative;
+    width: 600px;
+    margin: 30px auto 20px auto;
+    background: #EEEEEE;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+    font-family: Comfortaa;
+    color: #2d2e2ee2
+  }
+
+  .link-row {
+    text-decoration: none;
+    max-height: 15px;
+  }
+
+  .display-content {
+    font-size: large;
+  }
+
+  .display-mood {
+    color: #FFC93C;
+    text-align: left;
+  }
+
+  .display-last-edited {
+    font-size: small;
+    color: #2d2e2ea9
+  }
+
+
+
 
