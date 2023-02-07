@@ -109,15 +109,17 @@
   }
 
   form.create-area input,
-  form.create-area textarea {
+  form.create-area textarea,
+  .edit-area {
     width: 100%;
     border: none;
     padding: 4px;
     outline: none;
-    font-size: 1.2em;
+    font-size: large;
     font-family: Comfortaa;
     resize: none;
     background-color: #EEEEEE;
+    color: #2d2e2ee2;
   }
   
    .save-button {
@@ -134,7 +136,7 @@
     border: none;
     outline: none;
   }
-  
+
   form p {
     color: #2d2e2e7a;
     font-family: Comfortaa;
@@ -144,11 +146,11 @@
     cursor: default;
   }
 
-  form hr {
+  .custom-hr {
     border: 0;
     height: 1px;
     margin-bottom: 1%;
-    background: #2d2e2e50;
+    background: #44878750;
   } 
   
   .float {
@@ -260,6 +262,18 @@
     color: #2d2e2ea9
   }
 
+  .flex-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -5px;
+    gap: 1;
+    text-align: center;
+  }
+
+  .item-1 {
+    width: auto;
+    justify-content: center;
+  }
 
 
 

@@ -10,11 +10,8 @@ import { useState } from "react";
 export default function ViewEntry() {
     const params = useParams();
     const entries = useSelector((state) => state.entriesSlice.entries);
-    const entry = entries.id[params.id - 1];
+    const entry = entries.find(obj => obj.id === parseInt(params.id, 10));
     const [redirectToCreate, setRedirectToCreate] = useState(false);
-
-    
-
     if (redirectToCreate) {
         return <Navigate to='/newentry' />
         setRedirectToCreate(false);
@@ -22,7 +19,7 @@ export default function ViewEntry() {
     
     return (<div>
         <h1 className="page-title">Take a look back at {entry.date}</h1>
-        <Entry />
+        <Entry id={entry.id}/>
         <div className="aligned">
         <Link className="ref" to="/">go back to all entries</Link>
         </div>

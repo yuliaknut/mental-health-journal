@@ -33,11 +33,13 @@ export const entriesSlice = createSlice({
             state.entries.unshift(action.payload);
         },
         remove: (state, action) => {
-            state.entries.splice(action.payload);
+            const indexToRemove = state.entries.findIndex(obj => obj.id === action.payload);
+            state.entries.splice(indexToRemove, 1);
         },
         edit: (state, action) => {
-            //need to edit: to place the updated entry in the right index spot
-            state.entries.push(action.payload);
+            const indexToEdit = state.entries.findIndex(obj => obj.id === action.payload.entryId);
+            state.entries.splice(indexToEdit, 1, action.payload.newEntry);
+            console.log("pppppppppp", action.payload, indexToEdit);
         }
     }
 })

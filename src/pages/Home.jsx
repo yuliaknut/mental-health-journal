@@ -14,27 +14,15 @@ import CreateIcon from '@mui/icons-material/Create';
 export default function Home() {
 
     const entries = useSelector((state) => state.entriesSlice.entries);
-    //const [redirect, setRedirect] = useState("");
     const [redirectToCreate, setRedirectToCreate] = useState(false);
     const navigate = useNavigate();
-
-    // function handleRedirect(id) {
-    //     //const path = "/entry/" + id;
-    //     console.log("zzzzzzzzzzzz", id);
-    //     return <Navigate to={"/entry/" + id} />
-    //     //return <Navigate to={path} />
-    // }
-
     if (redirectToCreate) {
         return <Navigate to='/newentry' />
         setRedirectToCreate(false);
     }
 
     function handleSelect(id) {
-        console.log(id);
-        
-        return navigate(`/entry/${id}`)
-        // return <Navigate to='/newentry' />
+        return navigate(`/entry/${id}`);
     }
 
     const moodIcons = {
