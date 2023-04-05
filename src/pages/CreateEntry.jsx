@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CreateArea from "../components/CreateArea";
 
 //const entries = useSelector((state) => state.entriesSlice.entries);

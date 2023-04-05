@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-function Header() {
-    
-    return <header>
+function Header () {
+  return <header>
         <a className="header-title" href="/">UJournal</a>
     </header>
 }
 
-export default Header;
+export default Header
